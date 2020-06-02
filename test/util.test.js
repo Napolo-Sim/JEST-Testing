@@ -5,9 +5,12 @@ describe("Add", () => {
             expect(add(2, 2)).toBe(4);
         });
     });
+
+    describe("Failure", () => {
+        it("Should throw an error if first argument is not a number", () => {
+            //For an error, we need to call the function, but not run it
+            expect(() => add("2", 2)).toThrowError();
+        });
+    })
 });
-    // describe("Fail", () => {
-    //     it("Should not return the sum of the two passed arguments", () => {
-    //         expect(add(2, 2)).toBe(4);
-    //     });
-    // })
+
